@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 echo "Welcome to User Registration"
 echo "Patterns: Day 14 assignment"
 #1
@@ -37,7 +37,15 @@ if [[ $num =~ $pattern ]]; then
 else
         echo False
 fi 
-
+#5
+echo "Password Rule1:Minimum 8 characters"
+read -p "Enter the password: " pass
+pattern="^[A-Za-z]{8,}$"
+if [[ $pass =~ $pattern ]]; then
+        echo True
+else
+        echo False
+fi
 
 
 
