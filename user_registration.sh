@@ -37,12 +37,13 @@ if [[ $num =~ $pattern ]]; then
 else
         echo False
 fi 
-#7
+#8
 echo "Password Rule1:Minimum 8 characters"
 echo "Password Rule2:Atleast one uppercase"
 echo "Password Rule3:Atlease one number"
+echo "Password Rule4:Has exactly one special character"
 read -p "Enter the password: " pass
-pattern="^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$"
+#pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*#?&])[A-Za-z0-9\@\$\!\%\*\#\?\&]{8,}$"
 if [[ $pass =~ $pattern ]]; then
         echo True
 else
