@@ -43,7 +43,7 @@ echo "Password Rule2:Atleast one uppercase"
 echo "Password Rule3:Atlease one number"
 echo "Password Rule4:Has exactly one special character"
 read -p "Enter the password: " pass
-#pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*#?&])[A-Za-z0-9\@\$\!\%\*\#\?\&]{8,}$"
+#pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!_%*#?&])(?!(?:.*[@$!_%*#?&]){2})[\w@$!_%*#?&]{8,}$$"
 if [[ $pass =~ $pattern ]]; then
         echo True
 else
